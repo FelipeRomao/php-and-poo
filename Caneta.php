@@ -8,6 +8,14 @@ class Caneta {
     protected $carga;
     protected $tampada;
     
+    function Caneta($modelo, $cor, $ponta, $carga){
+        $this->setModelo($modelo);
+        $this->setCor($cor);
+        $this->setPonta($ponta);
+        $this->setCarga($carga);
+        $this->tampar();
+    }
+    
     public function escrever() {
         if ($this -> tampada == true) {
             echo "<h1>Erro ao escrever</h1>";
